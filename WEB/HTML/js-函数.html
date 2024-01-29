@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+
+<script>
+    // var a = prompt("enter your number");
+    // function fib(a){
+    //     if(a==1||a==2)return a;
+    //     else return fib(a-1)+fib(a-2);
+    // }
+    // alert(fib(a));
+
+    // var fib = function(a){
+    //     if (a == 1 || a == 2) return a;
+    //     else return fib(a - 1) + fib(a - 2);
+    // }
+    var mem = new Array(1, 2); 
+    var a = prompt("Enter the number")
+    function fib(n){
+        if(mem[n-1]) {
+            return mem[n-1];
+        }
+        else{
+            mem[n-1] = fib(n-1)+fib(n-2);
+            return mem[n-1];
+        }
+    }
+    alert(fib(a));
+</script>
+</html>
